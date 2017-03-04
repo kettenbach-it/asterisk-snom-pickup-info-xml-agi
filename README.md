@@ -18,10 +18,14 @@ That's why I decided ti diable notifycid and write an AGI script to do the job.
 My thanks go to Chris Maciejewski <chris@level7systems.co.uk> who wrote a very useful sip library in php,
 that I use to generate the sip-notifys for the snom phones.
 
-See the scrrenhot for a impression what the script will display on the snom phone.
+See the screenshot for a impression what the script will display on the snom (370) phone:
+
+![](Screenshot.png)
 
 Beware: this script does not honor subscriptions or any other "security" features of for voip systems.
 Called as an AGI, it will send callerid information to any phone in your network.
+You don't need a subscription, but if you don't have one, you won't be able to pickup the call.
+So this script is just an addon to configuring subscriptions and pickup for your snom phones.
 
 On the snom phone, you need to set:
 
