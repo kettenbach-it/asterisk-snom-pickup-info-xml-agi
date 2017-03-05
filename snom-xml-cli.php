@@ -11,7 +11,6 @@
 * Tested on Snom 320 - use option "-l short" for this phone
 *
 **/
-
 require_once('PhpSIP.class.php');
 
 $options = getopt("l:d:n:c:e:");
@@ -43,7 +42,12 @@ try
 					An: '. $options['e'] . '<br/>
 					Von: ' . $options['n'] . '<br/> 
 					Nummer: ' . $options['c'] . '
-			</Text>
+			  </Text>
+				<SoftKeyItem>
+					<Name>F1</Name>
+					<Label>Clear</Name>
+					<Softkey>CANCEL</Softkey>
+				</SoftKeyItem>
 			</SnomIPPhoneText>
 		');
 	} 
@@ -53,7 +57,12 @@ try
 			<SnomIPPhoneText>
 				<Text>
 					Von: ' . $options['n'] .' ' . $options['c'] . '
-			</Text>
+			  </Text>
+				<SoftKeyItem>
+					<Name>F1</Name>
+					<Label>Clear</Name>
+					<Softkey>CANCEL</Softkey>
+				</SoftKeyItem>
 			</SnomIPPhoneText>
 		');
 	}

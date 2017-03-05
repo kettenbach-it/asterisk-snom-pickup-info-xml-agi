@@ -16,7 +16,6 @@
 *
 *
 **/
-
 require_once('PhpSIP.class.php');
 
 $agivars = array();
@@ -70,10 +69,14 @@ try
 			<?xml version="1.0" encoding="UTF-8"?>
 			<SnomIPPhoneText>
 				<Text>
-					Von: ' . $text . ' <br/>
-					An: '  . $agi_extension . ' <br/>
+					An:'  . $agi_extension . ' Von:' . $text . ' <br/>
 				  Um: ' . date("D M j G:i:s") . '
-			</Text>
+			  </Text>
+				<SoftKeyItem>
+					<Name>F1</Name>
+					<Label>Clear</Name>
+					<Softkey>CANCEL</Softkey>
+				</SoftKeyItem>
 			</SnomIPPhoneText>
 		');
   $res = $api->send();
